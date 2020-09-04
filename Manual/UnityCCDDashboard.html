@@ -1,0 +1,317 @@
+<!DOCTYPE html><html class="no-js" lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5V25JL6');
+    </script><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary">
+<meta property="og:title" content="Unity CCD Develop Dashboard - Unity 手册">
+<title>Unity CCD Develop Dashboard - Unity 手册</title>
+<meta name="description" content="You can use Cloud Content Delivery (CCD) in the Develop Dashboard to create and maintain buckets, badges and releases. However, you must use the command-line interface (CLI) to upload, delete and sync files and folders before you manage them in the Develop Dashboard.">
+<meta property="og:description" content="You can use Cloud Content Delivery (CCD) in the Develop Dashboard to create and maintain buckets, badges and releases. However, you must use the command-line interface (CLI) to upload, delete and sync files and folders before you manage them in the Develop Dashboard.">
+<meta name="author" content="Unity Technologies">
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../StaticFiles/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../StaticFiles/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../StaticFiles/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../StaticFiles/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../StaticFiles/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
+<meta name="msapplication-TileColor" content="#222c37">
+<meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
+<script>
+      var docs_type = 'Manual';
+      var lang = 'cn';
+      var page = 'UnityCCDDashboard';
+      if(!page) page = 'index';
+      var version = '2019.4';
+      var docs_versions = [{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+<link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
+<link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDDashboard.html">
+<link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/UnityCCDDashboard.html" hreflang="en">
+<link rel="alternate" href="https://docs.unity3d.com/cn/2019.4/Manual/UnityCCDDashboard.html" hreflang="zh">
+<link rel="alternate" href="https://docs.unity3d.com/ja/2019.4/Manual/UnityCCDDashboard.html" hreflang="ja">
+<link rel="alternate" href="https://docs.unity3d.com/es/2019.4/Manual/UnityCCDDashboard.html" hreflang="es">
+<link rel="alternate" href="https://docs.unity3d.com/kr/2019.4/Manual/UnityCCDDashboard.html" hreflang="ko">
+<link rel="alternate" href="https://docs.unity3d.com/ru/2019.4/Manual/UnityCCDDashboard.html" hreflang="ru">
+<link rel="alternate" href="https://docs.unity3d.com/2019.4/Documentation/Manual/UnityCCDDashboard.html" hreflang="x-default">
+</head>
+<body>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="header-wrapper">
+<div id="header" class="header"><div class="content">
+<div class="spacer"><div class="menu">
+<div id="nav-open" for="nav-input"><span></span></div>
+<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="search-form"><form action="30_search.html" method="get" class="apisearch">
+<input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
+</form></div>
+<ul class="menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+</div></div>
+<div class="more">
+<div class="filler"></div>
+<ul><li><a href="https://unity3d.com/">
+                unity3d.com
+              </a></li></ul>
+</div>
+</div></div>
+<div class="toolbar"><div class="content">
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDDashboard.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDDashboard.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDDashboard.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDDashboard.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDDashboard.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDDashboard.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDDashboard.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDDashboard.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDDashboard.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDDashboard.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDDashboard.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDDashboard.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDDashboard.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDDashboard.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDDashboard.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<ul class="nav-menu-items">
+<li class="menu-item"><a href="../Manual/index.html" class="selected">手册</a></li>
+<li class="menu-item"><a href="../ScriptReference/index.html" class="">脚本 API</a></li>
+</ul>
+<div class="lang-switcher">
+<div class="current toggle" data-target=".lang-list">
+<div class="lbl">语言:
+        <span class="b">中文</span>
+</div>
+<div class="arrow"></div>
+</div>
+<div class="lang-list" style="display:none;"><ul>
+<li><a data-lang="en" href="/2019.4/Documentation/Manual/UnityCCDDashboard.html">English</a></li>
+<li><a data-lang="cn" href="/cn/2019.4/Manual/UnityCCDDashboard.html">中文</a></li>
+<li><a data-lang="ja" href="/ja/2019.4/Manual/UnityCCDDashboard.html">日本語</a></li>
+<li><a data-lang="es" href="/es/2019.4/Manual/UnityCCDDashboard.html">Español</a></li>
+<li><a data-lang="kr" href="/kr/2019.4/Manual/UnityCCDDashboard.html">한국어</a></li>
+<li><a data-lang="ru" href="/ru/2019.4/Manual/UnityCCDDashboard.html">Русский</a></li>
+</ul></div>
+</div>
+</div></div>
+</div>
+<div id="master-wrapper" class="master-wrapper clear">
+<div id="sidebar" class="sidebar hidden"><div class="sidebar-wrap"><div class="content"><div class="sidebar-menu"><div class="toc">
+<h2>手册</h2>
+<div class="version-switcher">
+<div class="current toggle" data-target=".version-list"><div class="version-number">
+<div class="d-inline-block">
+          Version:
+          <b>2019.4</b>
+</div>
+<div class="d-inline-block arrow"></div>
+</div></div>
+<div class="version-list" style="display:none;">
+<ul class="versions">
+<li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/UnityCCDDashboard.html">2020.2</a></li>
+<li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/UnityCCDDashboard.html">2020.1</a></li>
+<li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/UnityCCDDashboard.html">2019.4</a></li>
+<li class=""><a class="docs_version_url_2019.3" href="/cn/2019.3/Manual/UnityCCDDashboard.html">2019.3</a></li>
+<li class=""><a class="docs_version_url_2019.2" href="/cn/2019.2/Manual/UnityCCDDashboard.html">2019.2</a></li>
+<li class=""><a class="docs_version_url_2019.1" href="/cn/2019.1/Manual/UnityCCDDashboard.html">2019.1</a></li>
+<li class="supported"><a class="docs_version_url_2018.4" href="/cn/2018.4/Manual/UnityCCDDashboard.html">2018.4</a></li>
+<li class=""><a class="docs_version_url_2018.3" href="/cn/2018.3/Manual/UnityCCDDashboard.html">2018.3</a></li>
+<li class=""><a class="docs_version_url_2018.2" href="/cn/2018.2/Manual/UnityCCDDashboard.html">2018.2</a></li>
+<li class=""><a class="docs_version_url_2018.1" href="/cn/2018.1/Manual/UnityCCDDashboard.html">2018.1</a></li>
+<li class=""><a class="docs_version_url_2017.4" href="/cn/2017.4/Manual/UnityCCDDashboard.html">2017.4</a></li>
+<li class=""><a class="docs_version_url_2017.3" href="/cn/2017.3/Manual/UnityCCDDashboard.html">2017.3</a></li>
+<li class=""><a class="docs_version_url_2017.2" href="/cn/2017.2/Manual/UnityCCDDashboard.html">2017.2</a></li>
+<li class=""><a class="docs_version_url_2017.1" href="/cn/2017.1/Manual/UnityCCDDashboard.html">2017.1</a></li>
+<li class=""><a class="docs_version_url_560" href="/cn/560/Manual/UnityCCDDashboard.html">5.6</a></li>
+<div class="versionsWithThisPage" style="display:none;"><li><p>包含此页的版本：</p></li></div>
+<div class="versionsWithoutThisPage" style="display:none;"><li><p>不含此页的版本：</p></li></div>
+</ul>
+<ul class="description">
+<li>
+<div class="supported-box"></div>受支持</li>
+<li>
+<div class="legacy-box"></div>旧版</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div></div></div></div></div>
+<div id="content-wrap" class="content-wrap opened-sidebar"><div class="content-block"><div class="content">
+<div class="section">
+<div class="breadcrumbs clear"><ul>
+<li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
+<li><a href="UnityServices.html">Unity 服务</a></li>
+<li><a href="UnityCCD.html">Unity Cloud Content Delivery</a></li>
+<li><a href="UnityCCDInterfaces.html">Cloud Content Delivery interfaces</a></li>
+<li>Unity CCD Develop Dashboard</li>
+</ul></div>
+<div class="mb20"><div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip">Unity CCD Command-line interface (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip">Using CCD via the command-line interface</div>
+</div>
+</div></div>
+<h1>Unity CCD Develop Dashboard</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
+
+<p>You can use Cloud Content Delivery (CCD) in the Develop Dashboard to create and maintain buckets, badges and releases. However, you must use the command-line interface (CLI) to upload, delete and sync files and folders before you manage them in the Develop Dashboard.</p>
+
+<p>As an example scenario, you could use the Develop Dashboard to interactively manage an application’s assets using a more visual user interface than the CLI provides.</p>
+
+<p>To access CCD in the Develop Dashboard:</p>
+
+<ol>
+<li>If you are using Unity services for the first time:
+
+<ol>
+<li>Create a <a href="https://id.unity.com/">Unity ID</a> account (if you don’t already have one).</li>
+<li>Log into the <a href="https://dashboard.unity3d.com/">Develop Dashboard</a> from the <strong>Develop</strong> tab.</li>
+<li>Click <strong>Create New Project</strong>. In the Create New Project window, fill in the details.</li>
+</ol>
+</li>
+<li>Select the project name, or click <strong>View</strong>.</li>
+<li>In the <strong>Overview</strong> page for this project, in the left-side navigation bar, select <strong>Content Delivery</strong> &gt; <strong>Buckets</strong>.</li>
+</ol>
+
+<h2>Buckets</h2>
+
+<p>In the <strong>Cloud Content Delivery</strong> page for your project, you need to create buckets to host your content.</p>
+
+<p>To add a bucket:</p>
+
+<ol>
+<li>Click <strong>Create Bucket</strong>.</li>
+<li>In the Create Bucket window, give the bucket a name and an optional description.</li>
+</ol>
+
+<p>In the bucket list view, each bucket has a details row that contains the following information:</p>
+
+<ul>
+<li>The bucket name</li>
+<li>A description of the bucket</li>
+<li>A snapshot of the current state:
+
+<ul>
+<li>The release number of the current release, or notification of unreleased changes.</li>
+<li>The date at which the last change was made to the bucket.</li>
+<li>The user name of the person who made the latest changes, or the name of the source for automated changes.</li>
+</ul>
+</li>
+</ul>
+
+<p>You can edit or delete a bucket via the <strong>More Items</strong> menu (⋮) at the end of a bucket’s row.</p>
+
+<p>To see more information about a bucket, click its name in the list view. In the bucket details screen, there are following tabs:</p>
+
+<ul>
+<li>
+<strong>Latest</strong>: Shows the current state of the bucket, and the latest versions of all its content. From here, you can create a release.
+The asset list is paginated, searchable, and contains a filter.
+If your bucket does not have any unreleased changes, you can promote a release from this tab.</li>
+<li>
+<strong>Releases</strong>: Displays all the releases you have created for this project.</li>
+<li>
+<strong>Badges</strong>: Lists all the badges available for this release.</li>
+</ul>
+
+<h2>Releases</h2>
+
+<p>You can manage the releases you have created for your project on the <strong>Releases</strong> tab. If your bucket has any unreleased content, you see the <strong>Create Release</strong> button in your release’s details row.</p>
+
+<p>To create a release:</p>
+
+<ol>
+<li>Select a bucket from the <strong>Content Delivery Buckets</strong> page that contains unreleased changes.</li>
+<li>In the bucket’s page, select the <strong>Latest</strong> tab.</li>
+<li>Select the <strong>Create Release</strong> button.</li>
+<li>In the <strong>Create Release</strong> dialog box, enter optional release notes and click <strong>Next</strong>.</li>
+<li>On the next page, choose the badges that you want to assign to this release (removing them from their current releases), and select <strong>Next</strong>.</li>
+<li>Review your changes, then select <strong>Submit</strong> to finalize, or <strong>Back</strong> to continue editing. The <strong>Unreleased Changes</strong> notification changes to reflect the new status.</li>
+</ol>
+
+<p>After you create a release, it appears in the list in the <strong>Releases</strong> tab, with its creation date and any associated badges. You can assign a badge to a release via the <strong>More Items</strong> menu (⋮) at the end of a release’s row.</p>
+
+<p>When you click on the <strong>Release #</strong> of a release in the list, you see a page that contains the release’s details, and a list of assets and bundles associated with that release.</p>
+
+<p>Some situations in your project’s release pipeline might require you to move a release from one bucket to another, which is a process called promotion. If your bucket does not have any unreleased changes, you see the <strong>Promote Release</strong> button in your release’s details row.</p>
+
+<p>To promote a release:</p>
+
+<ol>
+<li>Click the <strong>Release #</strong> of the release you want to promote in the <strong>Releases</strong> tab.</li>
+<li>In the release summary, click <strong>Promote Release</strong>.</li>
+<li>In the Promote Release window, select the bucket to which you want to promote the release in the <strong>Target Bucket</strong> drop-down.</li>
+<li>Add any optional release notes, and select <strong>Next</strong>.</li>
+<li>On the next page, choose the badges that you want to assign to this release (removing them from their current releases), and select <strong>Next</strong>.</li>
+<li>Review your changes, then select <strong>Promote Release</strong> to finalize, or <strong>Back</strong> to continue editing.</li>
+</ol>
+
+<h2>Badges</h2>
+
+<p>Attaching a badge to a release allows your application to load content from whichever release the badge is assigned to.</p>
+
+<p>To create a badge:</p>
+
+<ol>
+<li>Select a bucket from the <strong>Content Delivery Buckets</strong> page.</li>
+<li>Select the <strong>Badges</strong> tab.</li>
+<li>Select <strong>Add New</strong>.</li>
+<li>In the Add New Badge window, give the badge a unique name, and select its release from the drop-down list.</li>
+<li>Select <strong>Submit</strong>.</li>
+</ol>
+
+<p>The badge now appears in the badge list in the <strong>Badges</strong> tab. You can edit a badge’s associated release, or delete the badge via the <strong>More Items</strong> menu (⋮) at the end of a badge’s row.</p>
+<div class="nextprev clear">
+<div class="icon tt left mr1" data-distance="-40|-30|top">
+<span class="prev"><a href="UnityCCDCLI.html"></a></span><div class="tip">Unity CCD Command-line interface (CLI)</div>
+</div>
+<div class="icon tt right" data-distance="-40|-30|top">
+<span class="next"><a href="UnityCCDCLIWalkthrough.html"></a></span><div class="tip">Using CCD via the command-line interface</div>
+</div>
+</div>
+</div>
+<div class="footer-wrapper">
+<div class="footer clear">
+<div class="copy">版权所有 © 2020 Unity Technologies. Publication 2019.4</div>
+<div class="menu">
+<a href="https://learn.unity.com/">教程</a><a href="https://answers.unity3d.com">社区答案</a><a href="https://support.unity3d.com/hc/en-us">知识库</a><a href="https://forum.unity3d.com">论坛</a><a href="https://unity3d.com/asset-store">Asset Store</a>
+</div>
+</div>
+<div></div>
+</div>
+</div></div></div>
+</div>
+</body>
+</html>
