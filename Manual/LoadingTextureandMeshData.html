@@ -11,11 +11,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="twitter:card" content="summary">
-<meta property="og:title" content="Loading texture and mesh data - Unity 手册">
-<title>Loading texture and mesh data - Unity 手册</title>
+<meta property="og:title" content="加载纹理和网格数据 - Unity 手册">
+<title>加载纹理和网格数据 - Unity 手册</title>
 <meta property="og:image" content="https://docs.unity3d.com/cn/2019.4/C:/Mercurial/Manual/2020.1/content/uploads/Main/AsyncUploadQualitySettings.png">
-<meta name="description" content="Unity can load texture and mesh data from disk and upload it to the GPU in two different ways: synchronously or asynchronously. These two processes are called the synchronous upload pipeline and the asynchronous upload pipeline.">
-<meta property="og:description" content="Unity can load texture and mesh data from disk and upload it to the GPU in two different ways: synchronously or asynchronously. These two processes are called the synchronous upload pipeline and the asynchronous upload pipeline.">
+<meta name="description" content="Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。">
+<meta property="og:description" content="Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。">
 <meta name="author" content="Unity Technologies">
 <link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico">
 <link rel="icon" type="image/png" href="../StaticFiles/images/favicons/favicon.png">
@@ -27,13 +27,15 @@
 <link rel="apple-touch-icon-precomposed" href="../StaticFiles/images/favicons/apple-touch-icon.png">
 <meta name="msapplication-TileColor" content="#222c37">
 <meta name="msapplication-TileImage" content="../StaticFiles/images/favicons/tileicon-144x144.png">
-<script>
+<script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-domain-script="6e91be4c-3145-4ea2-aa64-89d716064836"></script><script type="text/javascript">
+        function OptanonWrapper() { }
+    </script><script>
       var docs_type = 'Manual';
       var lang = 'cn';
       var page = 'LoadingTextureandMeshData';
       if(!page) page = 'index';
       var version = '2019.4';
-      var docs_versions = [{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
+      var docs_versions = [{version: '2021.1',version_string: '2021.1',supported: true},{version: '2020.2',version_string: '2020.2',supported: true},{version: '2020.1',version_string: '2020.1',supported: true},{version: '2019.4',version_string: '2019.4',supported: true},{version: '2019.3',version_string: '2019.3',supported: false},{version: '2019.2',version_string: '2019.2',supported: false},{version: '2019.1',version_string: '2019.1',supported: false},{version: '2018.4',version_string: '2018.4',supported: true},{version: '2018.3',version_string: '2018.3',supported: false},{version: '2018.2',version_string: '2018.2',supported: false},{version: '2018.1',version_string: '2018.1',supported: false},{version: '2017.4',version_string: '2017.4',supported: false},{version: '2017.3',version_string: '2017.3',supported: false},{version: '2017.2',version_string: '2017.2',supported: false},{version: '2017.1',version_string: '2017.1',supported: false},{version: '5.6',version_string: '560',supported: false},];</script><script type="text/javascript" src="../StaticFiles/js/jquery.js"></script><script type="text/javascript" src="../StaticFiles/js/core.js"></script><script type="text/javascript" src="../StaticFiles/js/jquery.sidebar.min.js"></script><script type="text/javascript" src="docdata/toc.js"></script><script type="text/javascript" src=""></script><script type="text/javascript" src="../StaticFiles/js/custom.js"></script><link rel="stylesheet" type="text/css" href="../StaticFiles/css/core.css">
 <link rel="stylesheet" type="text/css" href="../StaticFiles/css/custom.css">
 <link rel="canonical" href="https://docs.unity3d.com/cn/2019.4/Manual/LoadingTextureandMeshData.html">
 <link rel="alternate" href="https://docs.unity3d.com/en/2019.4/Manual/LoadingTextureandMeshData.html" hreflang="en">
@@ -50,7 +52,7 @@
 <div id="header" class="header"><div class="content">
 <div class="spacer"><div class="menu">
 <div id="nav-open" for="nav-input"><span></span></div>
-<div class="logo"><a href="https://docs.unity3d.com"></a></div>
+<div class="logo"><a href="./index.html"></a></div>
 <div class="search-form"><form action="30_search.html" method="get" class="apisearch">
 <input type="text" name="q" placeholder="搜索手册..." autosave="Unity Reference" results="5" class="sbox field" id="q"><input type="submit" class="submit">
 </form></div>
@@ -77,6 +79,7 @@
 </div></div>
 <div class="version-list" style="display:none;">
 <ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LoadingTextureandMeshData.html">2021.1</a></li>
 <li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LoadingTextureandMeshData.html">2020.2</a></li>
 <li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LoadingTextureandMeshData.html">2020.1</a></li>
 <li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LoadingTextureandMeshData.html">2019.4</a></li>
@@ -138,6 +141,7 @@
 </div></div>
 <div class="version-list" style="display:none;">
 <ul class="versions">
+<li class="supported"><a class="docs_version_url_2021.1" href="/cn/2021.1/Manual/LoadingTextureandMeshData.html">2021.1</a></li>
 <li class="supported"><a class="docs_version_url_2020.2" href="/cn/2020.2/Manual/LoadingTextureandMeshData.html">2020.2</a></li>
 <li class="supported"><a class="docs_version_url_2020.1" href="/cn/2020.1/Manual/LoadingTextureandMeshData.html">2020.1</a></li>
 <li class="supported"><a class="docs_version_url_2019.4" href="/cn/2019.4/Manual/LoadingTextureandMeshData.html">2019.4</a></li>
@@ -172,7 +176,7 @@
 <li><a href="UnityManual.html">Unity 用户手册 (2019.4 LTS)</a></li>
 <li><a href="Graphics.html">图形</a></li>
 <li>高级渲染功能</li>
-<li>Loading texture and mesh data</li>
+<li>加载纹理和网格数据</li>
 </ul></div>
 <div class="mb20"><div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
@@ -182,78 +186,80 @@
 <span class="next"><a href="OptimizingGraphicsPerformance.html"></a></span><div class="tip">优化图形性能</div>
 </div>
 </div></div>
-<h1>Loading texture and mesh data</h1>
+<h1>加载纹理和网格数据</h1>
 <!--BeginSwitchLink--><!--EndSwitchLink-->
 <div class="clear"></div>
 
-<p>Unity can load texture and mesh data from disk and upload it to the GPU in two different ways: synchronously or asynchronously. These two processes are called the synchronous upload pipeline and the asynchronous upload pipeline.</p>
+<p>Unity 可从磁盘加载纹理和网格数据，并以两种不同方式将数据上传到 GPU：同步或异步。这两个过程称为同步上传管线和异步上传管线。</p>
 
-<p>When Unity uses the synchronous upload pipeline, it cannot perform other tasks while it loads and uploads the data. This can cause visible pauses in your application. When Unity uses the asynchronous upload pipeline, it can perform other tasks while it loads and uploads the data in the background.</p>
+<p>当 Unity 使用同步上传管线时，在加载和上传数据时无法执行其他任务。这种情况下可能会导致应用程序出现明显的暂停。当 Unity 使用异步上传管线时，数据在后台加载和上传，同时可以执行其他任务。</p>
 
-<p>If a texture or mesh is eligible for the asynchronous upload pipeline, Unity uses the asynchronous upload pipeline automatically. If a texture or mesh is ineligible for the asynchronous upload pipeline, Unity uses the synchronous upload pipeline automatically.</p>
+<p>如果某个纹理或网格适合异步上传管线，则 Unity 会自动使用异步上传管线。如果某个纹理或网格不适合异步上传管线，则 Unity 会自动使用同步上传管线。</p>
 
 <h2>工作原理</h2>
 
-<p>The main difference between the synchronous and asynchronous upload pipelines is where Unity saves the data at build time, which affects how Unity loads it at runtime.</p>
+<p>同步和异步上传管线之间的主要区别是 Unity 在构建时保存数据的位置，这会影响 Unity 在运行时加载数据的方式。</p>
 
-<p>In the synchronous upload pipeline, Unity must load both the metadata (header data) and the texel or vertex data (binary data) for the texture or mesh in a single frame. In the asynchronous upload pipeline, Unity must load only the header data in a single frame, and it can stream the binary data to the GPU over subsequent frames.</p>
+<p>在同步上传管线中，Unity 必须在单个帧中同时加载纹理或网格的元数据（标头数据）和纹素或顶点数据（二进制数据）。在异步上传管线中，Unity 必须在单个帧中仅加载标头数据，并可以在后续帧中将二进制数据流式传输到 GPU。</p>
 
-<p>In the synchronous upload pipeline:</p>
-
-<ul>
-<li>At build time, Unity writes both the header and the binary data for the mesh or texture to the same .res file.</li>
-<li>At runtime, when the application needs the texture or mesh, Unity loads both the header data and binary data for that texture or mesh from the .res file into memory. When all of the data is in memory, Unity then uploads the binary data from memory to the GPU. The loading and uploading operations occur mainly on the main thread, in a single frame.</li>
-</ul>
-
-<p>In the asynchronous upload pipeline:</p>
+<p>在同步上传管线中：</p>
 
 <ul>
-<li>At build time, Unity writes the header data to a .res file and the binary data to a separate .resS file.</li>
-<li>At runtime, hen the application needs the texture or mesh, Unity loads the header from the .res file into memory. When the header is in memory, Unity then streams the binary data from the .resS file to the GPU using a fixed-sized ring buffer. Unity streams the binary data using multiple threads, over the course of several frames. Note that on some console platforms where Unity already knows the GPU hardware, Unity skips the ring buffer and loads straight into the GPU memory.</li>
+<li>在构建时，Unity 将网格或纹理的标头数据和二进制数据都写入同一 .res 文件。</li>
+<li>在运行时，当应用程序需要纹理或网格的时候，Unity 将该纹理或网格的标头数据和二进制数据从 .res 文件加载到内存中。当所有数据都位于内存中时，Unity 随后将二进制数据从内存上传到 GPU。加载和上传操作主要发生在主线程上的单个帧中。</li>
 </ul>
 
-<h2>Texture and mesh data eligibility</h2>
-
-<p>A texture is eligible for the asynchronous upload pipeline if the following conditions are met:</p>
+<p>在异步上传管线中：</p>
 
 <ul>
-<li>The texture is not read/write enabled.</li>
-<li>The texture is not in the Resources folder.</li>
-<li>If the build target is Android, LZ4 compression is enabled in the Project’s Build Settings.</li>
+<li>在构建时，Unity 将标头数据写入到一个 .res 文件，而将二进制数据写入到另一个单独的 .resS 文件。</li>
+<li>在运行时，当应用程序需要纹理或网格的时候，Unity 将标头数据从 .res 文件加载到内存中。当标头数据位于内存中时，Unity 随后使用固定大小的环形缓冲区将二进制数据从 .resS 文件流式传输到 GPU。Unity 使用多个线程通过几个帧流式传输二进制数据。请注意，在 Unity 已了解 GPU 硬件的某些游戏主机平台上，Unity 会跳过环形缓冲区并直接加载到 GPU 内存中。</li>
 </ul>
 
-<p>Note that if you load a texture using <code>LoadImage(byte[] data)</code>, this forces Unity to use the synchronous upload pipeline, even if the above conditions are met.</p>
+<h2>纹理和网格数据适合的上传管线</h2>
 
-<p>A mesh is eligible for the asynchronous upload pipeline if the following conditions are met:</p>
+<p>如果满足以下条件，纹理适合异步上传管线：</p>
 
 <ul>
-<li>The mesh is not read/write enabled.</li>
-<li>The mesh is not in the Resources folder.</li>
-<li>The mesh has no <a href="../ScriptReference/Mesh-blendShapeCount.html">BlendShapes</a>.</li>
-<li>Unity has not applied Dynamic Batching to the mesh, either because the mesh is ineligible for Dynamic Batching or because Dynamic Batching is disabled. For more information on Dynamic Batching, see <a href="DrawCallBatching.html">Draw call batching</a>.</li>
-<li>The mesh vertex/index data is not needed by a Particle System, a Terrain, or a Mesh Collider.</li>
-<li>The mesh has no <a href="../ScriptReference/Mesh.boneWeights.html">bone weights</a>.</li>
-<li>The mesh <a href="../ScriptReference/MeshTopology.html">topology</a> is not <a href="../ScriptReference/MeshTopology.Quads.html">quads</a>.</li>
-<li>The <a href="../ScriptReference/ModelImporter-meshCompression.html">meshCompression</a> for the mesh asset is set to <a href="../ScriptReference/ModelImporterMeshCompression.Off.html">Off</a>.
- If the build target is Android, LZ4 compression is enabled in the Project’s Build Settings.</li>
+<li>纹理未启用读/写权限。</li>
+<li>纹理不在 Resources 文件夹中。</li>
+<li>如果构建目标是 Android，在项目的构建设置 (Build Settings) 中启用了 LZ4 压缩。</li>
 </ul>
 
-<p>In all other circumstances, Unity loads textures and meshes synchronously.</p>
+<p>请注意，如果使用 <code>LoadImage(byte[] data)</code> 来加载纹理，即使满足上述条件，仍会强制 Unity 使用同步上传管线。</p>
 
-<h2>How to identify which upload pipeline Unity is using</h2>
-
-<p>You can use the <a href="Profiler.html">Profiler</a> or another profiling tool to identify when Unity is using the asynchronous upload pipeline, by observing thread activity and profiler markers.</p>
-
-<p>The following indicate that Unity is using the asynchronous upload pipeline to upload textures or meshes:</p>
+<p>如果满足以下条件，网格适合异步上传管线：</p>
 
 <ul>
-<li>The <code>AsyncUploadManager.ScheduleAsyncRead</code>, <code>AsyncReadManager.ReadFile</code>, and <code>Async.DirectTextureLoadBegin</code> profiler markers.</li>
-<li>Activity on the <code>AsyncRead</code> thread.</li>
+<li>网格未启用读/写权限。</li>
+<li>网格不在 Resources 文件夹中。</li>
+<li>网格没有 <a href="../ScriptReference/Mesh-blendShapeCount.html">BlendShape</a>。</li>
+<li>Unity 尚未将动态批处理 (Dynamic Batching) 应用于网格，原因是网格不适合进行动态批处理，或者是因为禁用了动态批处理。有关动态批处理的更多信息，请参阅<a href="DrawCallBatching.html">绘制调用批处理</a>。</li>
+<li>粒子系统、地形或网格碰撞体不需要网格顶点/索引数据。</li>
+<li>网格没有<a href="../ScriptReference/Mesh.boneWeights.html">骨骼权重</a>。</li>
+<li>网格<a href="../ScriptReference/MeshTopology.html">拓扑</a>不是<a href="../ScriptReference/MeshTopology.Quads.html">四边形</a>。</li>
+<li>网格资源的 <a href="../ScriptReference/ModelImporter-meshCompression.html">meshCompression</a> 设置为 <a href="../ScriptReference/ModelImporterMeshCompression.Off.html">Off</a>。
+如果构建目标是 Android，在项目的构建设置 (Build Settings) 中启用了 LZ4 压缩。</li>
 </ul>
 
-<p>If you do not see this activity, then Unity is not using the asynchronous upload pipeline.</p>
+<p>在所有其他情况下，Unity 会同步加载纹理和网格。</p>
 
-<p>Note that the following profiler markers do not indicate that Unity is using the asynchronous upload pipeline; Unity calls them to check whether any asynchronous upload work needs to occur:</p>
+<h2>如何识别 Unity 所使用的上传管线</h2>
+
+<p>可使用<a href="Profiler.html">性能分析器</a>或其他性能分析工具通过观察线程活动和性能分析器标记来确定 Unity 在何时使用了异步上传管线。</p>
+
+<p>以下内容表明 Unity 正在使用异步上传管线来上传纹理或网格：</p>
+
+<ul>
+<li>
+<code>AsyncUploadManager.ScheduleAsyncRead</code>、<code>AsyncReadManager.ReadFile</code> 和 <code>Async.DirectTextureLoadBegin</code> 性能分析器标记。</li>
+<li>
+<code>AsyncRead</code> 线程上的活动。</li>
+</ul>
+
+<p>如果没有看到此活动，则表明 Unity 没有使用异步上传管线。</p>
+
+<p>请注意，以下性能分析器标记并不表示 Unity 正在使用异步上传管线；Unity 调用它们来检查是否需要进行任何异步上传工作：</p>
 
 <ul>
 <li><code>Initialization.AsyncUploadTimeSlicedUpdate</code></li>
@@ -261,36 +267,36 @@
 <li><code>AsyncUploadManager.ScheduleAsyncCommands</code></li>
 </ul>
 
-<h2>Configuring the asynchronous upload pipeline</h2>
+<h2>配置异步上传管线</h2>
 
-<p>You can configure these settings for the asynchronous upload pipeline. Note that you cannot configure settings for the synchronous upload pipeline.</p>
+<p>可配置异步上传管线的以下设置。请注意，无法配置同步上传管线的设置。</p>
 
 <figure>
-<img src="C:/Mercurial/Manual/2020.1/content/uploads/Main/AsyncUploadQualitySettings.png" alt="The Async Upload settings in the Quality settings">
-<figcaption>The Async Upload settings in the Quality settings</figcaption>
+<img src="C:/Mercurial/Manual/2020.1/content/uploads/Main/AsyncUploadQualitySettings.png" alt="Quality settings 中的 Async Upload 设置">
+<figcaption>Quality settings 中的 Async Upload 设置</figcaption>
 </figure>
 
 <h3>Async Upload Buffer</h3>
 
-<p>Unity re-uses a single ring buffer to stream texture and mesh data to the GPU. This reduces the number of memory allocations required.</p>
+<p>Unity 重复使用单个环形缓冲区将纹理和网格数据流式传输到 GPU。如此将减少所需的内存分配次数。</p>
 
-<p>The <strong>Async Upload Buffer</strong> determines the size of this ring buffer in megabytes. It has a minimum size of 2, and a maximum size of 512.</p>
+<p><strong>Async Upload Buffer</strong> 决定了此环形缓冲区的大小（以 MB 为单位）。该值的最小大小为 2，最大大小为 512。</p>
 
-<p>Unity automatically resizes the buffer to fit the largest texture or mesh that is currently loading. This can be a slow operation, especially if Unity has to perform it more than once; for example, if you are loading many textures that are larger than the default buffer size. To reduce the number of times that Unity must resize the buffer, set this value to fit the largest value that you expect to load. This is usually the largest texture in the Scene. </p>
+<p>Unity 会自动调整缓冲区的大小以适应当前加载的最大纹理或网格。这可能是一个缓慢的操作，尤其是在 Unity 必须多次执行该操作的情况下；例如，如果要加载许多大于默认缓冲区大小的纹理，则属于这种情况。为了减少 Unity 必须调整缓冲区大小的次数，请设置该值以适合您期望加载的最大值。通常这是场景中最大的纹理。</p>
 
-<p>You can configure this value in the Quality settings window, or using the <a href="../ScriptReference/QualitySettings-asyncUploadBufferSize.html">QualitySettings.asyncUploadBufferSize</a> API.</p>
+<p>可在 Quality settings 窗口中或使用 <a href="../ScriptReference/QualitySettings-asyncUploadBufferSize.html">QualitySettings.asyncUploadBufferSize</a> API 来配置该值。</p>
 
 <h3>Async Upload Time Slice</h3>
 
-<p><strong>Async Upload Time Slice</strong> is the amount of time the CPU spends uploading texture or mesh data to the GPU, in milliseconds per frame.</p>
+<p><strong>Async Upload Time Slice</strong> 是 CPU 将纹理或网格数据上传到 GPU 时花费的时间量（以毫秒/帧为单位）。</p>
 
-<p>A larger value means the data will be ready on the GPU sooner, but the CPU will spend more time on upload operations during those frames. Note that Unity only uses this time for uploading if there is data waiting in the buffer to be uploaded to the GPU; if there is no data waiting, Unity can use this time for other operations.</p>
+<p>较大的值表示数据将更快地在 GPU 上准备就绪，但是 CPU 将在这些帧期间花费更多时间进行上传操作。请注意，只有在缓冲区中有数据等待上传到 GPU 时，Unity 才使用此时间进行上传；如果没有等待的数据，Unity 可以将此时间用于其他操作。</p>
 
-<p>You can configure this value in the Quality settings window, or using the <a href="../ScriptReference/QualitySettings-asyncUploadTimeSlice.html">QualitySettings.asyncUploadTimeSlice</a> API. </p>
+<p>可在 Quality settings 窗口中或使用 <a href="../ScriptReference/QualitySettings-asyncUploadTimeSlice.html">QualitySettings.asyncUploadTimeSlice</a> API 来配置该值。</p>
 
 <h2>其他信息</h2>
 
-<p>For more information on uploading texture and mesh data asynchronously, see the Unity blog post <a href="https://blogs.unity3d.com/2018/10/08/optimizing-loading-performance-understanding-the-async-upload-pipeline">Optimizing loading performance: Understanding the Async Upload Pipeline</a>.</p>
+<p>有关异步上传纹理和网格数据的更多信息，请参阅 Unity 博客文章：<a href="https://blogs.unity3d.com/2018/10/08/optimizing-loading-performance-understanding-the-async-upload-pipeline">优化加载性能：了解异步上传管线 (Optimizing loading performance: Understanding the Async Upload Pipeline)</a>。</p>
 <!-- area:graphics -->
 <div class="nextprev clear">
 <div class="icon tt left mr1" data-distance="-40|-30|top">
